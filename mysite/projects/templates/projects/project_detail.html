@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <a href="/" class="btn btn-outline-secondary mb-4">&larr; Back to Portfolio</a>
+
+            <div class="card shadow-sm border-0">
+                <img src="{{ project.image.url }}" class="card-img-top" alt="{{ project.title }}">
+
+                <div class="card-body p-5">
+                    <h1 class="font-weight-bold mb-3">{{ project.title }}</h1>
+                    <span class="badge badge-primary mb-4 p-2">{{ project.technology }}</span>
+
+                    <p class="lead text-muted mb-5" style="white-space: pre-wrap;">{{ project.description }}</p>
+
+                    {% if project.project_link %}
+                        <a href="{{ project.project_link }}" target="_blank" class="btn btn-primary btn-lg">
+                            View Live Project
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
