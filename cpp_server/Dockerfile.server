@@ -1,0 +1,38 @@
+# ==========================================
+# STAGE 1: The Heavy Builder Environment
+# ==========================================
+FROM ubuntu:22.04 AS builder
+
+# Install all the heavy compilation tools
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    cmake \
+    protobuf-compiler \
+    libprotobuf-dev \
+    # ... any other networking/asio dependencies
+
+WORKDIR /src
+COPY . .
+
+# Compile the gRPC server (assuming a CMake setup)
+RUN mkdir build && cd build && cmake .. && make
+
+# ==========================================
+# STAGE 2: The Minimal Production Container
+# ==========================================
+# We switch to a tiny Alpine image
+FROM alpine:latest
+
+# Install only the absolute bare minimum runtime libraries
+RUN apk add --no-cache libstdc++ gcompat
+
+WORKDIR /app
+
+# Copy ONLY the compiled binary from the builder stage
+COPY --from=builder /src/build/my_grpc_server .
+
+# Expose the port injected by Cloud Run
+EXPOSE $PORT
+
+# Run the raw binary
+CMD ["./my_grpc_server"]

@@ -8,3 +8,4 @@ urlpatterns = [
     # eg, /projects/1/ and passes it to the view
     path('<int:pk>/', views.project_detail, name='project_detail'),
 ]
+

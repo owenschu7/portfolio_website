@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+{% block content %}
+
+<div class="container mt-5">
+    <h2>gRPC C++ Calculator</h2>
+    <p>This form talks to a Python view, which sends a Protobuf over HTTP/2 to a C++ server.</p>
+
+    <form method="POST" class="mb-4">
+        {% csrf_token %} <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <input type="number" name="num_a" class="form-control" placeholder="Number A" value="{{ a }}" required>
+            </div>
+            <div class="col-auto">
+                <span>✖️</span>
+            </div>
+            <div class="col-auto">
+                <input type="number" name="num_b" class="form-control" placeholder="Number B" value="{{ b }}" required>
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-primary">Calculate via C++</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="mt-4">
+        {% if error %}
+            <div class="alert alert-danger">{{ error }}</div>
+        {% elif result is not None %}
+            <div class="alert alert-success">
+                <h4>Result from C++ Server: <strong>{{ result }}</strong></h4>
+            </div>
+        {% else %}
+            <div class="alert alert-secondary">Waiting for input...</div>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

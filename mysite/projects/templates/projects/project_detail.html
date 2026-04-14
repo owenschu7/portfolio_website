@@ -15,10 +15,14 @@
 
                     <p class="lead text-muted mb-5" style="white-space: pre-wrap;">{{ project.description }}</p>
 
-                    {% if project.project_link %}
-                        <a href="{{ project.project_link }}" target="_blank" class="btn btn-primary btn-lg">
-                            View Live Project
-                        </a>
+                    {% if project.inSiteProject %}
+                    <a href="/{{ project.slug }}/" target="_blank" class="btn btn-primary btn-lg">
+                        View Live Project
+                    </a>
+                    {% elif project.project_link %}
+                    <a href="{{ project.project_link }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+                        View Project
+                    </a>
                     {% endif %}
                 </div>
             </div>

@@ -1,0 +1,26 @@
+
+syntax = "proto3";
+
+// this become the namespace in C++ and the module name in Python
+package calculator;
+
+// define the service (the api endpoint)
+service CalculatorService {
+  //define the function
+  // what it takes in
+  // what it spits out
+  rpc Multiply (MultiplyRequest) returns (MultiplyResponse) {}
+}
+
+
+// define the request payload
+message MultiplyRequest {
+  int32 a = 1; // note the 1 and the 2 are not the values
+  int32 b = 2; // they are id tags used for binary compression
+}
+
+//define the repsonse payload
+message MultiplyResponse {
+  int32 result = 1;
+}
+
