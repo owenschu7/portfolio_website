@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+// The package name helps prevent name clashes and acts as the module name
+package text_processor;
+
+// Define the service (the API endpoint)
+service TextService {
+  // Define the function
+  // Takes in a message containing a string
+  // Returns a message containing a string
+  rpc ProcessText (TextRequest) returns (TextResponse) {}
+}
+
+// Define the request payload
+message TextRequest {
+  // 'string' is the data type for text in proto3
+  string input_text = 1; 
+}
+
+// Define the response payload
+message TextResponse {
+  // The reply message also holds a string
+  string output_text = 1; 
+}
