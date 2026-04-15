@@ -1,6 +1,7 @@
 {% extends 'core/base.html' %}
 {% block content %}
 
+<!--multiply two numbers gRPC demo-->
 <div class="container mt-5">
     <h2>gRPC C++ Calculator</h2>
     <p>This form talks to a Python view, which sends a Protobuf over HTTP/2 to a C++ server.</p>
@@ -17,17 +18,88 @@
                 <input type="number" name="num_b" class="form-control" placeholder="Number B" value="{{ b }}" required>
             </div>
             <div class="col-auto">
-                <button type="submit" class="btn btn-primary">Calculate via C++</button>
+                <button type="submit" name="action" value="calculate" class="btn btn-primary">Calculate via C++</button>
             </div>
         </div>
     </form>
 
     <div class="mt-4">
-        {% if error %}
-            <div class="alert alert-danger">{{ error }}</div>
-        {% elif result is not None %}
+        {% if calc_error %}
+            <div class="alert alert-danger">{{ calc_error }}</div>
+        {% elif calc_result is not None %}
             <div class="alert alert-success">
-                <h4>Result from C++ Server: <strong>{{ result }}</strong></h4>
+                <h4>Result from C++ Server: <strong>{{ calc_result }}</strong></h4>
+            </div>
+        {% else %}
+            <div class="alert alert-secondary">Waiting for input...</div>
+        {% endif %}
+    </div>
+</div>
+
+<br>
+
+<!--calculate baccarat hands gRPC demo-->
+<div class="container mt-5">
+    <h2>gRPC Card Dealer Service</h2>
+    <p>This form talks to a Python view, which requests a specific number of dealt hands from the C++ gRPC server.</p>
+
+    <form method="POST" class="mb-4">
+        {% csrf_token %} 
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <label for="numHands" class="col-form-label"><strong>Number of Hands:</strong></label>
+            </div>
+            <div class="col-auto">
+                <input type="number" id="numHands" name="num_hands" class="form-control" placeholder="e.g., 5" value="{{ num_hands }}" min="1" required>
+            </div>
+            <div class="col-auto">
+                <button type="submit" name="action" value="deal" class="btn btn-primary">Deal Hands via C++</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="mt-4">
+        {% if deal_error %}
+            <div class="alert alert-danger">{{ deal_error }}</div>
+        {% elif deal_result is not None %}
+            <div class="alert alert-success">
+                <h4>Hands from C++ Server:</h4>
+                <p class="mb-0">{{ deal_result|linebreaksbr }}</p>
+            </div>
+        {% else %}
+            <div class="alert alert-secondary">Waiting for input...</div>
+        {% endif %}
+    </div>
+</div>
+
+
+<!--run a python server that handles api calls to openai gRPC demo-->
+<div class="container mt-5">
+    <h2>gRPC Python Server Call</h2>
+    <p>This form calls a python server running seperately, which does a bunch of AI calls</p>
+
+    <form method="POST" class="mb-4">
+        {% csrf_token %} 
+        <div class="row g-3 align-items-center">
+            <div class="col-auto">
+                <label for="genre" class="col-form-label"><strong>Genre:</strong></label>
+            </div>
+            <div class="col-auto">
+                <input type="text" id="genre" name="genre" class="form-control" placeholder="e.g., rock" value="{{ genre }}" required>
+            </div>
+            <div class="col-auto">
+                <button type="submit" name="action" value="generate" class="btn btn-primary">Generate Song Lyrics</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="mt-4">
+        {% if lyric_error %}
+            <div class="alert alert-danger">{{ lyric_error }}</div>
+        {% elif lyric_result is not None %}
+            <div class="alert alert-success">
+                <h4>Generated Lyrics:</h4>
+                <p class="mb-0">{{ lyric_result|linebreaksbr }}</p>
             </div>
         {% else %}
             <div class="alert alert-secondary">Waiting for input...</div>

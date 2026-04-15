@@ -161,16 +161,55 @@ CMakeFiles/my_grpc_server.dir/src/main.cpp.o: \
  /usr/include/c++/15.2.1/backward/auto_ptr.h \
  /usr/include/c++/15.2.1/pstl/glue_memory_defs.h \
  /usr/include/c++/15.2.1/pstl/execution_defs.h \
+ /usr/include/c++/15.2.1/chrono /usr/include/c++/15.2.1/bits/chrono.h \
+ /usr/include/c++/15.2.1/ratio /usr/include/c++/15.2.1/cstdint \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
+ /usr/include/bits/stdint-least.h /usr/include/c++/15.2.1/limits \
+ /usr/include/c++/15.2.1/ctime \
+ /usr/include/c++/15.2.1/bits/parse_numbers.h \
+ /home/owenschu/cool_website/cpp_server/src/../include/baccarat_table.h \
+ /usr/include/c++/15.2.1/vector /usr/include/c++/15.2.1/bits/stl_vector.h \
+ /usr/include/c++/15.2.1/bits/stl_bvector.h \
+ /usr/include/c++/15.2.1/bits/vector.tcc \
+ /home/owenschu/cool_website/cpp_server/src/../include/deck.h \
+ /usr/include/c++/15.2.1/random /usr/include/c++/15.2.1/cmath \
+ /usr/include/math.h /usr/include/bits/math-vector.h \
+ /usr/include/bits/libm-simd-decl-stubs.h \
+ /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
+ /usr/include/bits/fp-fast.h /usr/include/bits/mathcalls-macros.h \
+ /usr/include/bits/mathcalls-helper-functions.h \
+ /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
+ /usr/include/bits/iscanonical.h /usr/include/c++/15.2.1/bits/specfun.h \
+ /usr/include/c++/15.2.1/tr1/gamma.tcc \
+ /usr/include/c++/15.2.1/tr1/special_function_util.h \
+ /usr/include/c++/15.2.1/tr1/bessel_function.tcc \
+ /usr/include/c++/15.2.1/tr1/beta_function.tcc \
+ /usr/include/c++/15.2.1/tr1/ell_integral.tcc \
+ /usr/include/c++/15.2.1/tr1/exp_integral.tcc \
+ /usr/include/c++/15.2.1/tr1/hypergeometric.tcc \
+ /usr/include/c++/15.2.1/tr1/legendre_function.tcc \
+ /usr/include/c++/15.2.1/tr1/modified_bessel_func.tcc \
+ /usr/include/c++/15.2.1/tr1/poly_hermite.tcc \
+ /usr/include/c++/15.2.1/tr1/poly_laguerre.tcc \
+ /usr/include/c++/15.2.1/tr1/riemann_zeta.tcc \
+ /usr/include/c++/15.2.1/bits/random.h \
+ /usr/include/c++/15.2.1/bits/uniform_int_dist.h \
+ /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/opt_random.h \
+ /usr/include/c++/15.2.1/bits/random.tcc /usr/include/c++/15.2.1/numeric \
+ /usr/include/c++/15.2.1/bits/stl_numeric.h \
+ /usr/include/c++/15.2.1/pstl/glue_numeric_defs.h \
+ /home/owenschu/cool_website/cpp_server/src/../include/card.h \
+ /home/owenschu/cool_website/cpp_server/src/../include/baccarat_defs.h \
+ /home/owenschu/cool_website/cpp_server/src/../include/baccarat_hand.h \
+ /home/owenschu/cool_website/cpp_server/src/../include/baccarat_defs.h \
  /usr/include/grpcpp/grpcpp.h /usr/include/grpc/grpc.h \
  /usr/include/grpc/byte_buffer.h /usr/include/grpc/impl/grpc_types.h \
  /usr/include/grpc/impl/channel_arg_names.h \
  /usr/include/grpc/impl/compression_types.h \
  /usr/include/grpc/support/port_platform.h /usr/include/linux/version.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h \
- /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
- /usr/include/bits/stdint-least.h /usr/include/grpc/slice.h \
- /usr/include/grpc/impl/slice_type.h /usr/include/grpc/support/sync.h \
- /usr/include/grpc/support/time.h \
+ /usr/include/grpc/slice.h /usr/include/grpc/impl/slice_type.h \
+ /usr/include/grpc/support/sync.h /usr/include/grpc/support/time.h \
  /usr/include/grpc/support/sync_generic.h /usr/include/grpc/support/atm.h \
  /usr/include/grpc/support/atm_gcc_atomic.h \
  /usr/include/grpc/support/sync_abseil.h /usr/include/grpc/status.h \
@@ -191,14 +230,12 @@ CMakeFiles/my_grpc_server.dir/src/main.cpp.o: \
  /usr/include/c++/15.2.1/bits/stl_algo.h \
  /usr/include/c++/15.2.1/bits/algorithmfwd.h \
  /usr/include/c++/15.2.1/bits/stl_heap.h \
- /usr/include/c++/15.2.1/bits/uniform_int_dist.h \
  /usr/include/c++/15.2.1/pstl/glue_algorithm_defs.h \
  /usr/include/c++/15.2.1/cassert /usr/include/assert.h \
  /usr/include/c++/15.2.1/cstring /usr/include/string.h \
  /usr/include/strings.h /usr/include/c++/15.2.1/iterator \
  /usr/include/c++/15.2.1/bits/stream_iterator.h \
- /usr/include/c++/15.2.1/limits /usr/include/absl/base/attributes.h \
- /usr/include/absl/base/config.h \
+ /usr/include/absl/base/attributes.h /usr/include/absl/base/config.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/limits.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/syslimits.h \
  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
@@ -211,17 +248,12 @@ CMakeFiles/my_grpc_server.dir/src/main.cpp.o: \
  /usr/include/absl/base/macros.h /usr/include/absl/base/optimization.h \
  /usr/include/c++/15.2.1/utility \
  /usr/include/c++/15.2.1/bits/stl_relops.h /usr/include/absl/base/port.h \
- /usr/include/c++/15.2.1/vector /usr/include/c++/15.2.1/bits/stl_vector.h \
- /usr/include/c++/15.2.1/bits/stl_bvector.h \
- /usr/include/c++/15.2.1/bits/vector.tcc /usr/include/c++/15.2.1/stdlib.h \
- /usr/include/grpcpp/impl/call.h /usr/include/grpcpp/impl/call_hook.h \
+ /usr/include/c++/15.2.1/stdlib.h /usr/include/grpcpp/impl/call.h \
+ /usr/include/grpcpp/impl/call_hook.h \
  /usr/include/grpcpp/support/status.h /usr/include/grpcpp/impl/status.h \
  /usr/include/grpcpp/support/config.h \
  /usr/include/grpcpp/support/status_code_enum.h \
- /usr/include/grpcpp/support/time.h /usr/include/c++/15.2.1/chrono \
- /usr/include/c++/15.2.1/bits/chrono.h /usr/include/c++/15.2.1/ratio \
- /usr/include/c++/15.2.1/cstdint /usr/include/c++/15.2.1/ctime \
- /usr/include/c++/15.2.1/bits/parse_numbers.h \
+ /usr/include/grpcpp/support/time.h \
  /usr/include/grpcpp/support/byte_buffer.h \
  /usr/include/grpcpp/impl/serialization_traits.h \
  /usr/include/grpcpp/support/slice.h \
@@ -264,27 +296,7 @@ CMakeFiles/my_grpc_server.dir/src/main.cpp.o: \
  /usr/include/c++/15.2.1/bits/monostate.h \
  /usr/include/absl/utility/utility.h /usr/include/absl/log/log_entry.h \
  /usr/include/absl/log/internal/config.h /usr/include/absl/time/time.h \
- /usr/include/sys/time.h /usr/include/c++/15.2.1/cmath \
- /usr/include/math.h /usr/include/bits/math-vector.h \
- /usr/include/bits/libm-simd-decl-stubs.h \
- /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
- /usr/include/bits/fp-fast.h /usr/include/bits/mathcalls-macros.h \
- /usr/include/bits/mathcalls-helper-functions.h \
- /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
- /usr/include/bits/iscanonical.h /usr/include/c++/15.2.1/bits/specfun.h \
- /usr/include/c++/15.2.1/tr1/gamma.tcc \
- /usr/include/c++/15.2.1/tr1/special_function_util.h \
- /usr/include/c++/15.2.1/tr1/bessel_function.tcc \
- /usr/include/c++/15.2.1/tr1/beta_function.tcc \
- /usr/include/c++/15.2.1/tr1/ell_integral.tcc \
- /usr/include/c++/15.2.1/tr1/exp_integral.tcc \
- /usr/include/c++/15.2.1/tr1/hypergeometric.tcc \
- /usr/include/c++/15.2.1/tr1/legendre_function.tcc \
- /usr/include/c++/15.2.1/tr1/modified_bessel_func.tcc \
- /usr/include/c++/15.2.1/tr1/poly_hermite.tcc \
- /usr/include/c++/15.2.1/tr1/poly_laguerre.tcc \
- /usr/include/c++/15.2.1/tr1/riemann_zeta.tcc \
- /usr/include/absl/time/civil_time.h \
+ /usr/include/sys/time.h /usr/include/absl/time/civil_time.h \
  /usr/include/absl/time/internal/cctz/include/cctz/civil_time.h \
  /usr/include/absl/time/internal/cctz/include/cctz/civil_time_detail.h \
  /usr/include/absl/time/internal/cctz/include/cctz/time_zone.h \
@@ -512,9 +524,7 @@ CMakeFiles/my_grpc_server.dir/src/main.cpp.o: \
  /usr/include/google/protobuf/generated_message_reflection.h \
  /usr/include/google/protobuf/descriptor.h \
  /usr/include/absl/container/flat_hash_map.h \
- /usr/include/absl/algorithm/container.h /usr/include/c++/15.2.1/numeric \
- /usr/include/c++/15.2.1/bits/stl_numeric.h \
- /usr/include/c++/15.2.1/pstl/glue_numeric_defs.h \
+ /usr/include/absl/algorithm/container.h \
  /usr/include/absl/container/hash_container_defaults.h \
  /usr/include/absl/container/internal/hash_function_defaults.h \
  /usr/include/absl/container/internal/common.h \
@@ -568,4 +578,6 @@ CMakeFiles/my_grpc_server.dir/src/main.cpp.o: \
  /usr/include/grpcpp/support/proto_buffer_reader.h \
  /usr/include/grpcpp/support/proto_buffer_writer.h \
  /usr/include/grpcpp/support/stub_options.h \
- /usr/include/grpcpp/ports_def.inc /usr/include/grpcpp/ports_undef.inc
+ /usr/include/grpcpp/ports_def.inc /usr/include/grpcpp/ports_undef.inc \
+ /home/owenschu/cool_website/cpp_server/build/generated/baccaratSim.grpc.pb.h \
+ /home/owenschu/cool_website/cpp_server/build/generated/baccaratSim.pb.h

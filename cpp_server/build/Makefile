@@ -129,6 +129,54 @@ my_grpc_server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_grpc_server.dir/build.make CMakeFiles/my_grpc_server.dir/build
 .PHONY : my_grpc_server/fast
 
+generated/baccaratSim.grpc.pb.o: generated/baccaratSim.grpc.pb.cc.o
+.PHONY : generated/baccaratSim.grpc.pb.o
+
+# target to build an object file
+generated/baccaratSim.grpc.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_grpc_server.dir/build.make CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.o
+.PHONY : generated/baccaratSim.grpc.pb.cc.o
+
+generated/baccaratSim.grpc.pb.i: generated/baccaratSim.grpc.pb.cc.i
+.PHONY : generated/baccaratSim.grpc.pb.i
+
+# target to preprocess a source file
+generated/baccaratSim.grpc.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_grpc_server.dir/build.make CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.i
+.PHONY : generated/baccaratSim.grpc.pb.cc.i
+
+generated/baccaratSim.grpc.pb.s: generated/baccaratSim.grpc.pb.cc.s
+.PHONY : generated/baccaratSim.grpc.pb.s
+
+# target to generate assembly for a file
+generated/baccaratSim.grpc.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_grpc_server.dir/build.make CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.s
+.PHONY : generated/baccaratSim.grpc.pb.cc.s
+
+generated/baccaratSim.pb.o: generated/baccaratSim.pb.cc.o
+.PHONY : generated/baccaratSim.pb.o
+
+# target to build an object file
+generated/baccaratSim.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_grpc_server.dir/build.make CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.o
+.PHONY : generated/baccaratSim.pb.cc.o
+
+generated/baccaratSim.pb.i: generated/baccaratSim.pb.cc.i
+.PHONY : generated/baccaratSim.pb.i
+
+# target to preprocess a source file
+generated/baccaratSim.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_grpc_server.dir/build.make CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.i
+.PHONY : generated/baccaratSim.pb.cc.i
+
+generated/baccaratSim.pb.s: generated/baccaratSim.pb.cc.s
+.PHONY : generated/baccaratSim.pb.s
+
+# target to generate assembly for a file
+generated/baccaratSim.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_grpc_server.dir/build.make CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.s
+.PHONY : generated/baccaratSim.pb.cc.s
+
 generated/calculator.grpc.pb.o: generated/calculator.grpc.pb.cc.o
 .PHONY : generated/calculator.grpc.pb.o
 
@@ -177,6 +225,102 @@ generated/calculator.pb.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_grpc_server.dir/build.make CMakeFiles/my_grpc_server.dir/generated/calculator.pb.cc.s
 .PHONY : generated/calculator.pb.cc.s
 
+include/baccarat_hand.o: include/baccarat_hand.cpp.o
+.PHONY : include/baccarat_hand.o
+
+# target to build an object file
+include/baccarat_hand.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_grpc_server.dir/build.make CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.o
+.PHONY : include/baccarat_hand.cpp.o
+
+include/baccarat_hand.i: include/baccarat_hand.cpp.i
+.PHONY : include/baccarat_hand.i
+
+# target to preprocess a source file
+include/baccarat_hand.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_grpc_server.dir/build.make CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.i
+.PHONY : include/baccarat_hand.cpp.i
+
+include/baccarat_hand.s: include/baccarat_hand.cpp.s
+.PHONY : include/baccarat_hand.s
+
+# target to generate assembly for a file
+include/baccarat_hand.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_grpc_server.dir/build.make CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.s
+.PHONY : include/baccarat_hand.cpp.s
+
+include/baccarat_table.o: include/baccarat_table.cpp.o
+.PHONY : include/baccarat_table.o
+
+# target to build an object file
+include/baccarat_table.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_grpc_server.dir/build.make CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.o
+.PHONY : include/baccarat_table.cpp.o
+
+include/baccarat_table.i: include/baccarat_table.cpp.i
+.PHONY : include/baccarat_table.i
+
+# target to preprocess a source file
+include/baccarat_table.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_grpc_server.dir/build.make CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.i
+.PHONY : include/baccarat_table.cpp.i
+
+include/baccarat_table.s: include/baccarat_table.cpp.s
+.PHONY : include/baccarat_table.s
+
+# target to generate assembly for a file
+include/baccarat_table.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_grpc_server.dir/build.make CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.s
+.PHONY : include/baccarat_table.cpp.s
+
+include/card.o: include/card.cpp.o
+.PHONY : include/card.o
+
+# target to build an object file
+include/card.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_grpc_server.dir/build.make CMakeFiles/my_grpc_server.dir/include/card.cpp.o
+.PHONY : include/card.cpp.o
+
+include/card.i: include/card.cpp.i
+.PHONY : include/card.i
+
+# target to preprocess a source file
+include/card.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_grpc_server.dir/build.make CMakeFiles/my_grpc_server.dir/include/card.cpp.i
+.PHONY : include/card.cpp.i
+
+include/card.s: include/card.cpp.s
+.PHONY : include/card.s
+
+# target to generate assembly for a file
+include/card.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_grpc_server.dir/build.make CMakeFiles/my_grpc_server.dir/include/card.cpp.s
+.PHONY : include/card.cpp.s
+
+include/deck.o: include/deck.cpp.o
+.PHONY : include/deck.o
+
+# target to build an object file
+include/deck.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_grpc_server.dir/build.make CMakeFiles/my_grpc_server.dir/include/deck.cpp.o
+.PHONY : include/deck.cpp.o
+
+include/deck.i: include/deck.cpp.i
+.PHONY : include/deck.i
+
+# target to preprocess a source file
+include/deck.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_grpc_server.dir/build.make CMakeFiles/my_grpc_server.dir/include/deck.cpp.i
+.PHONY : include/deck.cpp.i
+
+include/deck.s: include/deck.cpp.s
+.PHONY : include/deck.s
+
+# target to generate assembly for a file
+include/deck.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_grpc_server.dir/build.make CMakeFiles/my_grpc_server.dir/include/deck.cpp.s
+.PHONY : include/deck.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -210,12 +354,30 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... my_grpc_server"
+	@echo "... generated/baccaratSim.grpc.pb.o"
+	@echo "... generated/baccaratSim.grpc.pb.i"
+	@echo "... generated/baccaratSim.grpc.pb.s"
+	@echo "... generated/baccaratSim.pb.o"
+	@echo "... generated/baccaratSim.pb.i"
+	@echo "... generated/baccaratSim.pb.s"
 	@echo "... generated/calculator.grpc.pb.o"
 	@echo "... generated/calculator.grpc.pb.i"
 	@echo "... generated/calculator.grpc.pb.s"
 	@echo "... generated/calculator.pb.o"
 	@echo "... generated/calculator.pb.i"
 	@echo "... generated/calculator.pb.s"
+	@echo "... include/baccarat_hand.o"
+	@echo "... include/baccarat_hand.i"
+	@echo "... include/baccarat_hand.s"
+	@echo "... include/baccarat_table.o"
+	@echo "... include/baccarat_table.i"
+	@echo "... include/baccarat_table.s"
+	@echo "... include/card.o"
+	@echo "... include/card.i"
+	@echo "... include/card.s"
+	@echo "... include/deck.o"
+	@echo "... include/deck.i"
+	@echo "... include/deck.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

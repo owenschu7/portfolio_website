@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package baccaratSim;
+
+service BaccaratEngine {
+  // Unary RPC
+  rpc SimulateBaccarat (SimRequest) returns (SimResponse) {}
+}
+
+message SimRequest {
+  int32 number_of_hands = 1;
+}
+
+message SimResponse {
+  int32 player_wins = 1;
+  int32 banker_wins = 2;
+  int32 ties = 3;
+  int32 pandas = 4;
+  int32 dragons = 5;
+  double execution_time_ms = 6; // To show off the speed!
+}

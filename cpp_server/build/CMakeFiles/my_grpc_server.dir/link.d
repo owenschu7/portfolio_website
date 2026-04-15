@@ -3,8 +3,14 @@ my_grpc_server: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o \
   CMakeFiles/my_grpc_server.dir/src/main.cpp.o \
+  CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.o \
+  CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.o \
+  CMakeFiles/my_grpc_server.dir/include/deck.cpp.o \
+  CMakeFiles/my_grpc_server.dir/include/card.cpp.o \
   CMakeFiles/my_grpc_server.dir/generated/calculator.pb.cc.o \
   CMakeFiles/my_grpc_server.dir/generated/calculator.grpc.pb.cc.o \
+  CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.o \
+  CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.o \
   /usr/lib/libgrpc++_reflection.so.1.78.1 \
   /usr/lib/libgrpc++.so.1.78.1 \
   /usr/lib/libprotobuf.so.33.1.0 \
@@ -147,9 +153,21 @@ my_grpc_server: \
 
 CMakeFiles/my_grpc_server.dir/src/main.cpp.o:
 
+CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.o:
+
+CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.o:
+
+CMakeFiles/my_grpc_server.dir/include/deck.cpp.o:
+
+CMakeFiles/my_grpc_server.dir/include/card.cpp.o:
+
 CMakeFiles/my_grpc_server.dir/generated/calculator.pb.cc.o:
 
 CMakeFiles/my_grpc_server.dir/generated/calculator.grpc.pb.cc.o:
+
+CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.o:
+
+CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.o:
 
 /usr/lib/libgrpc++_reflection.so.1.78.1:
 

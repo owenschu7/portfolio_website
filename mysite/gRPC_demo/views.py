@@ -4,49 +4,76 @@ import grpc
 # import your generated stubs from the local rpc folder
 from .rpc import calculator_pb2
 from .rpc import calculator_pb2_grpc
+from .rpc import baccaratSim_pb2
+from .rpc import baccaratSim_pb2_grpc
+
+# init the gRPC channel once at the module level
+grpc_channel = grpc.insecure_channel('localhost:50051')
+
+# init the stubs for both services
+calculator_stub = calculator_pb2_grpc.CalculatorServiceStub(grpc_channel)
+baccarat_stub = baccaratSim_pb2_grpc.BaccaratEngineStub(grpc_channel)
 
 # Create your views here.
 def gRPC_view(request):
-    # Default context to pass to the HTML template
-    context = {
-        'a': '',
-        'b': '',
-        'result': None,
-        'error': None
-    }
+    context = {}
 
     if request.method == 'POST':
-        try:
-            # 1. Grab the inputs from the HTML form
-            a_val = int(request.POST.get('num_a', 0))
-            b_val = int(request.POST.get('num_b', 0))
-            
-            # Save them in context so the form doesn't clear after clicking submit
-            context['a'] = a_val
-            context['b'] = b_val
+        # Check which button was actually pressed
+        action = request.POST.get('action')
 
-            # 2. Open the gRPC channel to your C++ server
-            # (Assuming your C++ server is running locally on port 50051)
-            with grpc.insecure_channel('localhost:50051') as channel:
-                # 3. Create the Stub (the diplomat)
-                stub = calculator_pb2_grpc.CalculatorServiceStub(channel)
+        if action == 'calculate':
+            try:
+                # Get and cast the data to the correct type
+                num_a = int(request.POST.get('num_a', 0))
+                num_b = int(request.POST.get('num_b', 0))
+                context['a'] = num_a
+                context['b'] = num_b
 
-                # 4. Build the payload using the Protobuf classes
-                grpc_request = calculator_pb2.MultiplyRequest(a=a_val, b=b_val)
+                # Build the payload
+                grpc_request = calculator_pb2.MultiplyRequest(a=num_a, b=num_b)
 
-                # 5. Execute the remote procedure call!
-                response = stub.Multiply(grpc_request, timeout=3.0)
+                # Execute the call with error handling
+                response = calculator_stub.Multiply(grpc_request, timeout=3.0)
+                context['calc_result'] = response.result
 
-                # 6. Extract the result
-                context['result'] = response.result
+            except ValueError:
+                context['calc_error'] = "Invalid input. Please enter numbers."
+            except grpc.RpcError as e:
+                # Catch gRPC specific errors (e.g., server offline, timeout)
+                context['calc_error'] = f"gRPC Error: {e.code().name} - {e.details()}"
 
-        except ValueError:
-            context['error'] = "Please enter valid whole numbers."
-        except grpc.RpcError as e:
-            # Catches issues like the C++ server being offline
-            context['error'] = f"Backend Connection Failed: {e.details()}"
+        elif action == 'deal':
+            try:
+                # Get and cast data
+                num_hands = int(request.POST.get('num_hands', 0))
+                context['num_hands'] = num_hands
 
-    # Render the template and pass the context data
+                # Build payload
+                grpc_request = baccaratSim_pb2.SimRequest(number_of_hands=num_hands)
+
+                # Execute call
+                response = baccarat_stub.SimulateBaccarat(grpc_request, timeout=10.0)
+                # Extract the result
+                # Format into a multiline string for the template's {{ result|linebreaksbr }}
+                context['deal_result'] = (
+                    f"Player Wins: {response.player_wins}\n"
+                    f"Banker Wins: {response.banker_wins}\n"
+                    f"Ties: {response.ties}\n"
+                    f"Pandas: {response.pandas}\n"
+                    f"Dragons: {response.dragons}\n"
+                    f"Execution Time: {response.execution_time_ms} ms"
+                )
+
+            except ValueError:
+                context['deal_error'] = "Invalid input. Please enter a whole number."
+            except grpc.RpcError as e:
+                context['deal_error'] = f"gRPC Error: {e.code().name} - {e.details()}"
+        #add other button actions here
+
     return render(request, 'gRPC_demo/gRPC_demo.html', context)
+
+
+
 
 

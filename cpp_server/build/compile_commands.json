@@ -1,0 +1,56 @@
+[
+{
+  "directory": "/home/owenschu/cool_website/cpp_server/build",
+  "command": "/usr/bin/c++ -DPROTOBUF_USE_DLLS -I/home/owenschu/cool_website/cpp_server/include -I/home/owenschu/cool_website/cpp_server/build/generated -std=gnu++17 -o CMakeFiles/my_grpc_server.dir/src/main.cpp.o -c /home/owenschu/cool_website/cpp_server/src/main.cpp",
+  "file": "/home/owenschu/cool_website/cpp_server/src/main.cpp",
+  "output": "CMakeFiles/my_grpc_server.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/owenschu/cool_website/cpp_server/build",
+  "command": "/usr/bin/c++ -DPROTOBUF_USE_DLLS -I/home/owenschu/cool_website/cpp_server/include -I/home/owenschu/cool_website/cpp_server/build/generated -std=gnu++17 -o CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.o -c /home/owenschu/cool_website/cpp_server/include/baccarat_table.cpp",
+  "file": "/home/owenschu/cool_website/cpp_server/include/baccarat_table.cpp",
+  "output": "CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.o"
+},
+{
+  "directory": "/home/owenschu/cool_website/cpp_server/build",
+  "command": "/usr/bin/c++ -DPROTOBUF_USE_DLLS -I/home/owenschu/cool_website/cpp_server/include -I/home/owenschu/cool_website/cpp_server/build/generated -std=gnu++17 -o CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.o -c /home/owenschu/cool_website/cpp_server/include/baccarat_hand.cpp",
+  "file": "/home/owenschu/cool_website/cpp_server/include/baccarat_hand.cpp",
+  "output": "CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.o"
+},
+{
+  "directory": "/home/owenschu/cool_website/cpp_server/build",
+  "command": "/usr/bin/c++ -DPROTOBUF_USE_DLLS -I/home/owenschu/cool_website/cpp_server/include -I/home/owenschu/cool_website/cpp_server/build/generated -std=gnu++17 -o CMakeFiles/my_grpc_server.dir/include/deck.cpp.o -c /home/owenschu/cool_website/cpp_server/include/deck.cpp",
+  "file": "/home/owenschu/cool_website/cpp_server/include/deck.cpp",
+  "output": "CMakeFiles/my_grpc_server.dir/include/deck.cpp.o"
+},
+{
+  "directory": "/home/owenschu/cool_website/cpp_server/build",
+  "command": "/usr/bin/c++ -DPROTOBUF_USE_DLLS -I/home/owenschu/cool_website/cpp_server/include -I/home/owenschu/cool_website/cpp_server/build/generated -std=gnu++17 -o CMakeFiles/my_grpc_server.dir/include/card.cpp.o -c /home/owenschu/cool_website/cpp_server/include/card.cpp",
+  "file": "/home/owenschu/cool_website/cpp_server/include/card.cpp",
+  "output": "CMakeFiles/my_grpc_server.dir/include/card.cpp.o"
+},
+{
+  "directory": "/home/owenschu/cool_website/cpp_server/build",
+  "command": "/usr/bin/c++ -DPROTOBUF_USE_DLLS -I/home/owenschu/cool_website/cpp_server/include -I/home/owenschu/cool_website/cpp_server/build/generated -std=gnu++17 -o CMakeFiles/my_grpc_server.dir/generated/calculator.pb.cc.o -c /home/owenschu/cool_website/cpp_server/build/generated/calculator.pb.cc",
+  "file": "/home/owenschu/cool_website/cpp_server/build/generated/calculator.pb.cc",
+  "output": "CMakeFiles/my_grpc_server.dir/generated/calculator.pb.cc.o"
+},
+{
+  "directory": "/home/owenschu/cool_website/cpp_server/build",
+  "command": "/usr/bin/c++ -DPROTOBUF_USE_DLLS -I/home/owenschu/cool_website/cpp_server/include -I/home/owenschu/cool_website/cpp_server/build/generated -std=gnu++17 -o CMakeFiles/my_grpc_server.dir/generated/calculator.grpc.pb.cc.o -c /home/owenschu/cool_website/cpp_server/build/generated/calculator.grpc.pb.cc",
+  "file": "/home/owenschu/cool_website/cpp_server/build/generated/calculator.grpc.pb.cc",
+  "output": "CMakeFiles/my_grpc_server.dir/generated/calculator.grpc.pb.cc.o"
+},
+{
+  "directory": "/home/owenschu/cool_website/cpp_server/build",
+  "command": "/usr/bin/c++ -DPROTOBUF_USE_DLLS -I/home/owenschu/cool_website/cpp_server/include -I/home/owenschu/cool_website/cpp_server/build/generated -std=gnu++17 -o CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.o -c /home/owenschu/cool_website/cpp_server/build/generated/baccaratSim.pb.cc",
+  "file": "/home/owenschu/cool_website/cpp_server/build/generated/baccaratSim.pb.cc",
+  "output": "CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.o"
+},
+{
+  "directory": "/home/owenschu/cool_website/cpp_server/build",
+  "command": "/usr/bin/c++ -DPROTOBUF_USE_DLLS -I/home/owenschu/cool_website/cpp_server/include -I/home/owenschu/cool_website/cpp_server/build/generated -std=gnu++17 -o CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.o -c /home/owenschu/cool_website/cpp_server/build/generated/baccaratSim.grpc.pb.cc",
+  "file": "/home/owenschu/cool_website/cpp_server/build/generated/baccaratSim.grpc.pb.cc",
+  "output": "CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.o"
+}
+]

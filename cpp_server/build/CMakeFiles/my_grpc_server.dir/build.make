@@ -70,7 +70,7 @@ include CMakeFiles/my_grpc_server.dir/progress.make
 include CMakeFiles/my_grpc_server.dir/flags.make
 
 generated/calculator.pb.cc: /home/owenschu/cool_website/protos/calculator.proto
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/owenschu/cool_website/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ gRPC stubs from service.proto"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/owenschu/cool_website/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ gRPC stubs from calculator.proto"
 	/usr/bin/protoc-33.1.0 --grpc_out=/home/owenschu/cool_website/cpp_server/build/generated --cpp_out=/home/owenschu/cool_website/cpp_server/build/generated -I /home/owenschu/cool_website/cpp_server/../protos --plugin=protoc-gen-grpc=/usr/bin/grpc_cpp_plugin /home/owenschu/cool_website/cpp_server/../protos/calculator.proto
 
 generated/calculator.grpc.pb.cc: generated/calculator.pb.cc
@@ -82,13 +82,26 @@ generated/calculator.pb.h: generated/calculator.pb.cc
 generated/calculator.grpc.pb.h: generated/calculator.pb.cc
 	@$(CMAKE_COMMAND) -E touch_nocreate generated/calculator.grpc.pb.h
 
+generated/baccaratSim.pb.cc: /home/owenschu/cool_website/protos/baccaratSim.proto
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/owenschu/cool_website/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ gRPC stubs from baccaratSim.proto"
+	/usr/bin/protoc-33.1.0 --grpc_out=/home/owenschu/cool_website/cpp_server/build/generated --cpp_out=/home/owenschu/cool_website/cpp_server/build/generated -I /home/owenschu/cool_website/cpp_server/../protos --plugin=protoc-gen-grpc=/usr/bin/grpc_cpp_plugin /home/owenschu/cool_website/cpp_server/../protos/baccaratSim.proto
+
+generated/baccaratSim.grpc.pb.cc: generated/baccaratSim.pb.cc
+	@$(CMAKE_COMMAND) -E touch_nocreate generated/baccaratSim.grpc.pb.cc
+
+generated/baccaratSim.pb.h: generated/baccaratSim.pb.cc
+	@$(CMAKE_COMMAND) -E touch_nocreate generated/baccaratSim.pb.h
+
+generated/baccaratSim.grpc.pb.h: generated/baccaratSim.pb.cc
+	@$(CMAKE_COMMAND) -E touch_nocreate generated/baccaratSim.grpc.pb.h
+
 CMakeFiles/my_grpc_server.dir/codegen:
 .PHONY : CMakeFiles/my_grpc_server.dir/codegen
 
 CMakeFiles/my_grpc_server.dir/src/main.cpp.o: CMakeFiles/my_grpc_server.dir/flags.make
 CMakeFiles/my_grpc_server.dir/src/main.cpp.o: /home/owenschu/cool_website/cpp_server/src/main.cpp
 CMakeFiles/my_grpc_server.dir/src/main.cpp.o: CMakeFiles/my_grpc_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/owenschu/cool_website/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/my_grpc_server.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/owenschu/cool_website/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/my_grpc_server.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_grpc_server.dir/src/main.cpp.o -MF CMakeFiles/my_grpc_server.dir/src/main.cpp.o.d -o CMakeFiles/my_grpc_server.dir/src/main.cpp.o -c /home/owenschu/cool_website/cpp_server/src/main.cpp
 
 CMakeFiles/my_grpc_server.dir/src/main.cpp.i: cmake_force
@@ -99,10 +112,66 @@ CMakeFiles/my_grpc_server.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_grpc_server.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/owenschu/cool_website/cpp_server/src/main.cpp -o CMakeFiles/my_grpc_server.dir/src/main.cpp.s
 
+CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.o: CMakeFiles/my_grpc_server.dir/flags.make
+CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.o: /home/owenschu/cool_website/cpp_server/include/baccarat_table.cpp
+CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.o: CMakeFiles/my_grpc_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/owenschu/cool_website/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.o -MF CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.o.d -o CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.o -c /home/owenschu/cool_website/cpp_server/include/baccarat_table.cpp
+
+CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/owenschu/cool_website/cpp_server/include/baccarat_table.cpp > CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.i
+
+CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/owenschu/cool_website/cpp_server/include/baccarat_table.cpp -o CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.s
+
+CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.o: CMakeFiles/my_grpc_server.dir/flags.make
+CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.o: /home/owenschu/cool_website/cpp_server/include/baccarat_hand.cpp
+CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.o: CMakeFiles/my_grpc_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/owenschu/cool_website/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.o -MF CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.o.d -o CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.o -c /home/owenschu/cool_website/cpp_server/include/baccarat_hand.cpp
+
+CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/owenschu/cool_website/cpp_server/include/baccarat_hand.cpp > CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.i
+
+CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/owenschu/cool_website/cpp_server/include/baccarat_hand.cpp -o CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.s
+
+CMakeFiles/my_grpc_server.dir/include/deck.cpp.o: CMakeFiles/my_grpc_server.dir/flags.make
+CMakeFiles/my_grpc_server.dir/include/deck.cpp.o: /home/owenschu/cool_website/cpp_server/include/deck.cpp
+CMakeFiles/my_grpc_server.dir/include/deck.cpp.o: CMakeFiles/my_grpc_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/owenschu/cool_website/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/my_grpc_server.dir/include/deck.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_grpc_server.dir/include/deck.cpp.o -MF CMakeFiles/my_grpc_server.dir/include/deck.cpp.o.d -o CMakeFiles/my_grpc_server.dir/include/deck.cpp.o -c /home/owenschu/cool_website/cpp_server/include/deck.cpp
+
+CMakeFiles/my_grpc_server.dir/include/deck.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_grpc_server.dir/include/deck.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/owenschu/cool_website/cpp_server/include/deck.cpp > CMakeFiles/my_grpc_server.dir/include/deck.cpp.i
+
+CMakeFiles/my_grpc_server.dir/include/deck.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_grpc_server.dir/include/deck.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/owenschu/cool_website/cpp_server/include/deck.cpp -o CMakeFiles/my_grpc_server.dir/include/deck.cpp.s
+
+CMakeFiles/my_grpc_server.dir/include/card.cpp.o: CMakeFiles/my_grpc_server.dir/flags.make
+CMakeFiles/my_grpc_server.dir/include/card.cpp.o: /home/owenschu/cool_website/cpp_server/include/card.cpp
+CMakeFiles/my_grpc_server.dir/include/card.cpp.o: CMakeFiles/my_grpc_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/owenschu/cool_website/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/my_grpc_server.dir/include/card.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_grpc_server.dir/include/card.cpp.o -MF CMakeFiles/my_grpc_server.dir/include/card.cpp.o.d -o CMakeFiles/my_grpc_server.dir/include/card.cpp.o -c /home/owenschu/cool_website/cpp_server/include/card.cpp
+
+CMakeFiles/my_grpc_server.dir/include/card.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_grpc_server.dir/include/card.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/owenschu/cool_website/cpp_server/include/card.cpp > CMakeFiles/my_grpc_server.dir/include/card.cpp.i
+
+CMakeFiles/my_grpc_server.dir/include/card.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_grpc_server.dir/include/card.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/owenschu/cool_website/cpp_server/include/card.cpp -o CMakeFiles/my_grpc_server.dir/include/card.cpp.s
+
 CMakeFiles/my_grpc_server.dir/generated/calculator.pb.cc.o: CMakeFiles/my_grpc_server.dir/flags.make
 CMakeFiles/my_grpc_server.dir/generated/calculator.pb.cc.o: generated/calculator.pb.cc
 CMakeFiles/my_grpc_server.dir/generated/calculator.pb.cc.o: CMakeFiles/my_grpc_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/owenschu/cool_website/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/my_grpc_server.dir/generated/calculator.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/owenschu/cool_website/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/my_grpc_server.dir/generated/calculator.pb.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_grpc_server.dir/generated/calculator.pb.cc.o -MF CMakeFiles/my_grpc_server.dir/generated/calculator.pb.cc.o.d -o CMakeFiles/my_grpc_server.dir/generated/calculator.pb.cc.o -c /home/owenschu/cool_website/cpp_server/build/generated/calculator.pb.cc
 
 CMakeFiles/my_grpc_server.dir/generated/calculator.pb.cc.i: cmake_force
@@ -116,7 +185,7 @@ CMakeFiles/my_grpc_server.dir/generated/calculator.pb.cc.s: cmake_force
 CMakeFiles/my_grpc_server.dir/generated/calculator.grpc.pb.cc.o: CMakeFiles/my_grpc_server.dir/flags.make
 CMakeFiles/my_grpc_server.dir/generated/calculator.grpc.pb.cc.o: generated/calculator.grpc.pb.cc
 CMakeFiles/my_grpc_server.dir/generated/calculator.grpc.pb.cc.o: CMakeFiles/my_grpc_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/owenschu/cool_website/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/my_grpc_server.dir/generated/calculator.grpc.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/owenschu/cool_website/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/my_grpc_server.dir/generated/calculator.grpc.pb.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_grpc_server.dir/generated/calculator.grpc.pb.cc.o -MF CMakeFiles/my_grpc_server.dir/generated/calculator.grpc.pb.cc.o.d -o CMakeFiles/my_grpc_server.dir/generated/calculator.grpc.pb.cc.o -c /home/owenschu/cool_website/cpp_server/build/generated/calculator.grpc.pb.cc
 
 CMakeFiles/my_grpc_server.dir/generated/calculator.grpc.pb.cc.i: cmake_force
@@ -127,18 +196,58 @@ CMakeFiles/my_grpc_server.dir/generated/calculator.grpc.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_grpc_server.dir/generated/calculator.grpc.pb.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/owenschu/cool_website/cpp_server/build/generated/calculator.grpc.pb.cc -o CMakeFiles/my_grpc_server.dir/generated/calculator.grpc.pb.cc.s
 
+CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.o: CMakeFiles/my_grpc_server.dir/flags.make
+CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.o: generated/baccaratSim.pb.cc
+CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.o: CMakeFiles/my_grpc_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/owenschu/cool_website/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.o -MF CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.o.d -o CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.o -c /home/owenschu/cool_website/cpp_server/build/generated/baccaratSim.pb.cc
+
+CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/owenschu/cool_website/cpp_server/build/generated/baccaratSim.pb.cc > CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.i
+
+CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/owenschu/cool_website/cpp_server/build/generated/baccaratSim.pb.cc -o CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.s
+
+CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.o: CMakeFiles/my_grpc_server.dir/flags.make
+CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.o: generated/baccaratSim.grpc.pb.cc
+CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.o: CMakeFiles/my_grpc_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/owenschu/cool_website/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.o -MF CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.o.d -o CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.o -c /home/owenschu/cool_website/cpp_server/build/generated/baccaratSim.grpc.pb.cc
+
+CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/owenschu/cool_website/cpp_server/build/generated/baccaratSim.grpc.pb.cc > CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.i
+
+CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/owenschu/cool_website/cpp_server/build/generated/baccaratSim.grpc.pb.cc -o CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.s
+
 # Object files for target my_grpc_server
 my_grpc_server_OBJECTS = \
 "CMakeFiles/my_grpc_server.dir/src/main.cpp.o" \
+"CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.o" \
+"CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.o" \
+"CMakeFiles/my_grpc_server.dir/include/deck.cpp.o" \
+"CMakeFiles/my_grpc_server.dir/include/card.cpp.o" \
 "CMakeFiles/my_grpc_server.dir/generated/calculator.pb.cc.o" \
-"CMakeFiles/my_grpc_server.dir/generated/calculator.grpc.pb.cc.o"
+"CMakeFiles/my_grpc_server.dir/generated/calculator.grpc.pb.cc.o" \
+"CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.o" \
+"CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.o"
 
 # External object files for target my_grpc_server
 my_grpc_server_EXTERNAL_OBJECTS =
 
 my_grpc_server: CMakeFiles/my_grpc_server.dir/src/main.cpp.o
+my_grpc_server: CMakeFiles/my_grpc_server.dir/include/baccarat_table.cpp.o
+my_grpc_server: CMakeFiles/my_grpc_server.dir/include/baccarat_hand.cpp.o
+my_grpc_server: CMakeFiles/my_grpc_server.dir/include/deck.cpp.o
+my_grpc_server: CMakeFiles/my_grpc_server.dir/include/card.cpp.o
 my_grpc_server: CMakeFiles/my_grpc_server.dir/generated/calculator.pb.cc.o
 my_grpc_server: CMakeFiles/my_grpc_server.dir/generated/calculator.grpc.pb.cc.o
+my_grpc_server: CMakeFiles/my_grpc_server.dir/generated/baccaratSim.pb.cc.o
+my_grpc_server: CMakeFiles/my_grpc_server.dir/generated/baccaratSim.grpc.pb.cc.o
 my_grpc_server: CMakeFiles/my_grpc_server.dir/build.make
 my_grpc_server: CMakeFiles/my_grpc_server.dir/compiler_depend.ts
 my_grpc_server: /usr/lib/libgrpc++_reflection.so.1.78.1
@@ -245,7 +354,7 @@ my_grpc_server: /usr/lib/libcrypto.so
 my_grpc_server: /usr/lib/libaddress_sorting.so.52.0.0
 my_grpc_server: /usr/lib/libsystemd.so
 my_grpc_server: CMakeFiles/my_grpc_server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/owenschu/cool_website/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable my_grpc_server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/owenschu/cool_website/cpp_server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable my_grpc_server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/my_grpc_server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -256,6 +365,10 @@ CMakeFiles/my_grpc_server.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/my_grpc_server.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/my_grpc_server.dir/clean
 
+CMakeFiles/my_grpc_server.dir/depend: generated/baccaratSim.grpc.pb.cc
+CMakeFiles/my_grpc_server.dir/depend: generated/baccaratSim.grpc.pb.h
+CMakeFiles/my_grpc_server.dir/depend: generated/baccaratSim.pb.cc
+CMakeFiles/my_grpc_server.dir/depend: generated/baccaratSim.pb.h
 CMakeFiles/my_grpc_server.dir/depend: generated/calculator.grpc.pb.cc
 CMakeFiles/my_grpc_server.dir/depend: generated/calculator.grpc.pb.h
 CMakeFiles/my_grpc_server.dir/depend: generated/calculator.pb.cc

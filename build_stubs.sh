@@ -2,12 +2,11 @@
 
 echo "Starting gRPC Python stub generation..."
 
-# 1. Target the gRPC_demo app
+# 1. Target directories
 PROTOS_DIR="./protos"
 TARGET_DIR="./mysite/gRPC_demo/rpc"
 
-# 2. Define the exact path to your virtual environment's Python executable
-# (Change 'venv' to whatever your virtual environment folder is actually named, like '.venv' or 'env')
+# 2. Python executable
 PYTHON_EXEC="./mysite/venv/bin/python"
 
 # 3. Ensure the destination directory exists
@@ -22,21 +21,31 @@ if [ ! -f "$PYTHON_EXEC" ]; then
     exit 1
 fi
 
-# 5. Run the protoc compiler using the VENV's Python!
-echo "Compiling calculator.proto..."
-$PYTHON_EXEC -m grpc_tools.protoc \
-    -I"$PROTOS_DIR" \
-    --python_out="$TARGET_DIR" \
-    --grpc_python_out="$TARGET_DIR" \
-    "$PROTOS_DIR/calculator.proto"
+# ==============================================================================
+# THE UPGRADE: Loop through ALL .proto files in the protos directory
+# ==============================================================================
+for PROTO_FILE in "$PROTOS_DIR"/*.proto; do
+    # Skip if no proto files are found (prevents bash errors)
+    [ -e "$PROTO_FILE" ] || continue 
 
-# 6. THE PATCH: Fix the broken gRPC import
-# This finds the bad import line and adds the "." for a relative import
-echo "Patching generated stubs for relative imports..."
+    # Extract just the filename without the .proto extension (e.g., "calculator")
+    BASENAME=$(basename "$PROTO_FILE" .proto)
 
-# For Linux (Arch/Ubuntu)
-sed -i 's/import calculator_pb2 as calculator__pb2/from . import calculator_pb2 as calculator__pb2/' "$TARGET_DIR/calculator_pb2_grpc.py"
+    echo "----------------------------------------"
+    echo "Processing $BASENAME.proto..."
+    
+    # 5. Compile the specific proto file
+    $PYTHON_EXEC -m grpc_tools.protoc \
+        -I"$PROTOS_DIR" \
+        --python_out="$TARGET_DIR" \
+        --grpc_python_out="$TARGET_DIR" \
+        "$PROTO_FILE"
 
+    # 6. Apply the relative import patch dynamically
+    echo "Patching $BASENAME generated stubs for relative imports..."
+    sed -i "s/import ${BASENAME}_pb2 as ${BASENAME}__pb2/from . import ${BASENAME}_pb2 as ${BASENAME}__pb2/" "$TARGET_DIR/${BASENAME}_pb2_grpc.py"
 
-echo "Success! Python stubs have been generated in $TARGET_DIR."
-echo "(Remember: The C++ stubs are handled automatically by CMake when you build the server)"
+done
+
+echo "----------------------------------------"
+echo "Success! All Python stubs have been generated and patched in $TARGET_DIR."
