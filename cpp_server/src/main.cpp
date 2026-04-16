@@ -60,7 +60,7 @@ class BaccaratSimServiceImpl final : public baccaratSim::BaccaratEngine::Service
     int hands_to_play = request->number_of_hands();
     std::cout << "Simulating " << hands_to_play << " hands..." << std::endl;
 
-    // --- Your C++ simulation loop goes here ---
+    // C++ simulation loop goes here
     Baccarat_table table;
     Round_Record round;
     Baccarat_Outcome outcome;
